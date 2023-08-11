@@ -1,0 +1,31 @@
+<div class="row banner">
+  <div class="col-12">
+    <h1>Collections <small>select which collection to view</small></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <div *ngFor="let collection of collections; let i = index" class="card">
+      <div class="card-block">
+        <h4>
+          <a class="focus" routerLink="{{collection.media.toLowerCase()}}">{{collection.media}}</a>
+          <span class="badge badge-pill badge-default float-right">{{counts[i]}} Total Entries</span>
+        </h4>
+        <nav class="navbar navbar-expand-md navbar-light">
+          <div class="container">
+            <button class="navbar-toggler" type='button' data-toggle='collapse' data-target=collection.media>
+              <span class="navbar-light navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav mr-auto row space-left">
+                <li class="nav-item" *ngFor="let format of collection.formats">
+                  <a class="span badge badge-warning" routerLink="{{collection.media.toLowerCase()}}/{{format}}">{{format}}</a>
+                </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+

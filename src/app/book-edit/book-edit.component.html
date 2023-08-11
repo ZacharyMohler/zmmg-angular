@@ -1,0 +1,60 @@
+<div class="row banner">
+  <div class="col-12">
+    <div *ngIf="updating; else notUpdating">
+      <h1><a style="text-decoration: none" routerLink="../../">◄</a> Update Book Entry</h1>
+    </div>
+
+    <ng-template #notUpdating>
+      <h1><a style="text-decoration: none" routerLink="../">◄</a> Add Book Entry</h1>
+    </ng-template>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-md-8">
+
+    <form (ngSubmit)="onFormSubmit(evt)">
+      <div role="alert" *ngIf="formError" class="alert alert-danger">{{ formError }}</div>
+      <div role="log" *ngIf="formSuccess" class="alert alert-danger">{{ formSuccess }}</div>
+      <div role="alert" *ngIf="formWarning" class="alert alert-danger">{{ formWarning }}</div>
+
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Title" [(ngModel)]="requiredFields.title">
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" name="author" placeholder="Author" [(ngModel)]="requiredFields.author">
+      </div>
+
+      <div class="form-group">
+        <label for="year">Year</label>
+        <input type="text" class="form-control" id="year" name="year" placeholder="Year" [(ngModel)]="requiredFields.year">
+      </div>
+
+      <div class="form-group">
+        <label for="comments">comments</label>
+        <input type="text" class="form-control" id="comments" name="comments" placeholder="Comments" [(ngModel)]="requiredFields.comments">
+      </div>
+
+      <div *ngIf="updating">
+        <div *ngIf="!warned">
+          <button type="submit" style="float: left" role="button" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+      <div *ngIf="!updating">
+        <button type="submit" style="float: left" role="button" class="btn btn-primary">Create</button>
+      </div>
+
+    </form>
+
+    <div *ngIf="updating">
+      <form (ngSubmit)="onDeleteSubmit(evt)">
+        <button type="submit" role="button" class="btn btn-primary">Delete</button>
+      </form>
+    </div>
+  </div>
+</div>
+

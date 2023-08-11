@@ -1,0 +1,72 @@
+<div class="row banner">
+  <div class="col-12">
+    <h1><a style="text-decoration: none" routerLink="../">◄</a> Movies   <small>seach an item...</small></h1>
+    <form ngNoForm class="float-right" action="/collections/movies/search" method="GET">
+      <input id="toSeach" name="toSearch" placeholder="seach a title..." />
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+    <div *ngIf="isLoggedIn()">
+      <a routerLink="/collections/movies/addMovie" style="text-decoration: none;" class="btn btn-primary">Add New</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col">
+    <p><strong>TITLE</strong></p>
+  </div>
+  <div class="col">
+    <p><strong>FORMAT</strong></p>
+  </div>
+  <div class="col">
+    <p><strong>TYPE</strong></p>
+  </div>
+  <div class="col">
+    <p><strong>COMMENTS</strong></p>
+  </div>
+</div>
+
+<hr class="entries" />
+<div class="error">{{message}}</div>
+
+<div *ngIf="!isLoggedIn()">
+  <div *ngFor="let movie of moviesList">
+    <div class="row">
+      <div class="col">
+        <p>{{movie.title}}</p>
+      </div>
+      <div class="col">
+        <p>{{movie.format}}</p>
+      </div>
+      <div class="col">
+        <p>{{movie.type}}</p>
+      </div>
+      <div class="col">
+        <p>{{movie.comments}}</p>
+      </div>
+    </div>
+    <hr class="entries" />
+  </div>
+</div>
+
+<div *ngIf="isLoggedIn()">
+  <div *ngFor="let movie of moviesList">
+    <div class="row">
+      <div class="col">
+        <a routerLink="movieEdit/{{movie._id}}">{{movie.title}}</a>
+      </div>
+      <div class="col">
+        <p>{{movie.format}}</p>
+      </div>
+      <div class="col">
+        <p>{{movie.type}}</p>
+      </div>
+      <div class="col">
+        <p>{{movie.comments}}</p>
+      </div>
+    </div>
+    <hr class="entries" />
+  </div>
+</div>
+
