@@ -15,7 +15,7 @@ export class GamesDataService {
 
   }
 //            BOTTOM TEXT
-  private apiBaseUrl = 'http://localhost:3000/api';
+  private apiBaseUrl = 'https://fast-savannah-97260.herokuapp.com/api';
 
   //get games from api based on the toSearch request url query parameter
   public getGamesSearch(toSearch: string): Promise<GamesEntry[]>
