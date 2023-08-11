@@ -4,6 +4,8 @@ const path = require('path');
 
 const app = express();
 
+console.log("WE GOT HERE!");
+
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/zmmg-df99072f6704'));
 
