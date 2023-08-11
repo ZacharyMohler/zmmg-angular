@@ -15,7 +15,7 @@ export class MusicDataService {
 
   }
 //            BOTTOM TEXT
-  private apiBaseUrl = 'http://localhost:3000/api';
+  private apiBaseUrl = 'https://fast-savannah-97260.herokuapp.com/api';
 
   //get music from api based on the toSearch request url query parameter
   public getMusicSearch(toSearch: string): Promise<MusicEntry[]>
