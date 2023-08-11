@@ -15,7 +15,7 @@ export class UserDataService {
   }
 //            BOTTOM TEXT
 
-  private apiBaseUrl = 'http://localhost:3000/api';
+  private apiBaseUrl = 'https://fast-savannah-97260.herokuapp.com/api';
 
   public login(user: User): Promise<AuthResponse>
   {
