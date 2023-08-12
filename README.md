@@ -1,5 +1,6 @@
 # Database management web app built in Angular with RESTful API back end
 (note: the API source code is found in another repository here => https://github.com/ZacharyMohler/zmmg-api)
+<b>If you desire to get this application working on your own machine, it is currently configured to work on a heroku cloud environment and will need to be re-configured to work locally.</b>
 
 All code not generated with angular CLI written by Zachary Mohler. 
 ### Reference material used: 
@@ -18,8 +19,6 @@ Express: 4.16.1
 MongoDB shell: 5.0.17
 
 JavaScript, TypeScript, HTML, CSS, Json Web Token, Twitter Bootstrap, SHA-2
-
-If you desire to get this application working on your own machine, it is currently configured to work on a heroku cloud environment and will need to be re-configured to work locally.
 
 # Landing page
 
