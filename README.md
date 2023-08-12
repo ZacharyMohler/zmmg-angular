@@ -17,7 +17,7 @@ Node: 16.20.1
 Express: 4.16.1
 MongoDB shell: 5.0.17
 
-JavaScript, TypeScript, HTML, CSS, Json Web Token, Twitter Bootstrap
+JavaScript, TypeScript, HTML, CSS, Json Web Token, Twitter Bootstrap, SHA-2
 
 
 # Landing page
