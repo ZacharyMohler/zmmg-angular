@@ -1,7 +1,7 @@
 # Database management web app built in Angular with RESTful API back end
 (note: the API source code is found in another repository here => https://github.com/ZacharyMohler/zmmg-api)
 
-#All code not generated with angular CLI written by Zachary Mohler. 
+All code not generated with angular CLI written by Zachary Mohler. 
 ### Reference material used: 
 Getting MEAN with Mongo, Express, Angular, and Node, Second Edition by Simon Holmes, Clive Harber
 
